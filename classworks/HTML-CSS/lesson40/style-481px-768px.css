@@ -1,0 +1,77 @@
+@media screen and (max-width: 480px) {
+  .circle-left,
+  .circle-right {
+    display: none;
+  }
+
+  /*
+Необхідно стилізувати  та звертатися до елемента за такою самою  конструкцією як ми зверталися перед цим ,бо якщо ми просто напишемо h2 ,то він нічого не змінить бо цей селектор матиме менше пріорітет ,нам потрібно стилізувати компонент (перестилізовувати в адаптивній версії використовуючи такий самий по вазі селектор що ми і використовували,не менше ,як іна початку )
+*/
+  .page-not-found h2 {
+    color: var(--Text-txt-primary, rgba(255, 255, 255, 0.9));
+    text-align: center;
+    font-family: Inter;
+    font-size: 110px;
+    font-style: normal;
+    font-weight: 700;
+    /*
+ми вказуємо висоту лінії 
+*/
+    line-height: 82px;
+    letter-spacing: -0.5px;
+  }
+
+  .page-not-found h3 {
+    color: var(--Text-txt-primary, rgba(255, 255, 255, 0.9));
+    text-align: center;
+
+    /* Title/2 strong */
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 33.6px */
+  }
+  .page-not-found p {
+    color: var(--Text-txt-secondary, rgba(255, 255, 255, 0.75));
+    text-align: center;
+
+    /* Text/2 regular */
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 25.2px */
+  }
+
+  .page-not-found div {
+    padding-top: 24px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page-not-found button:nth-child(1) {
+    display: flex;
+    height: 64px;
+    padding: 0px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 32px;
+    background: var(--Brand-Primary, #6f1df4);
+    border-radius: 24px;
+  }
+  .page-not-found button:nth-child(2) {
+    display: flex;
+    height: 64px;
+    padding: 0px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 32px;
+    background: var(--Background-bg-primary, #fff);
+  }
+}

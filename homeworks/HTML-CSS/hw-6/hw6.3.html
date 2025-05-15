@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hw-6.3</title>
+    <style>
+      body {
+        background-color: bisque;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        background-color: white;
+      }
+      .main_form {
+        width: 400px;
+        height: 400px;
+        border: 2px solid rgb(181, 180, 180);
+        align-items: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .main_form input[type="text"],
+      [type="password"] {
+        margin: 10px 40px 10px 40px;
+        width: 250px;
+        height: 30px;
+        border: 1px solid gray;
+      }
+      .main_form button {
+        background-color: rgb(17, 151, 192);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        width: 250px;
+        height: 30px;
+      }
+      .footer_form {
+        width: 400px;
+        height: 50px;
+        border: 2px solid rgb(181, 180, 180);
+      }
+      .main_form a.Facebook {
+        text-decoration: none;
+        list-style-type: none;
+        font-size: 20px;
+        color: rgb(13, 13, 108);
+      }
+      .main_form a.forgot {
+        text-decoration: none;
+        list-style-type: none;
+        color: rgb(9, 9, 74);
+      }
+
+      .main_form a.Facebook::before {
+        content: url(/homeworks/HTML-CSS/hw-6/favicon-32x32.png);
+        width: 16px;
+        height: 16px;
+        padding-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="main_form">
+        <h5>Instagram</h5>
+        <input type="text" placeholder="Номер телефону,імя користувача або " />
+        <input type="password" placeholder="Пароль" />
+        <button>Увійти</button>
+        <h5>АБО</h5>
+        <a class="Facebook" href="#">Увійти через Facebook</a>
+        <a class="forgot" href="#">Забули пароль?</a>
+      </div>
+      <div class="footer_form">
+        <h4></h4>
+        <a href="#"></a>
+      </div>
+    </form>
+  </body>
+</html>

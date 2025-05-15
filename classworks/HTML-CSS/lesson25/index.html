@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Кобінаторні селектори</title>
+    <style>
+      /*
+     Простіший спосіб звернення  доя конкретного параграфа без додавання класу або ідентифікатора-використати сусідній селектор
+
+
+     наприклад у нас є h1 ,і що еам необхідно застилізувати наступний параграф після нього,через плюсик вказуємо що повинен бути 
+      сусіднім компонентом саме параграф
+     */
+      h1 + p {
+        color: aquamarine;
+      }
+
+      /*
+     для того щоб застилізувати абсолютно всі компоненти які ідуть після h1
+     */
+      h1 ~ p {
+        color: yellowgreen;
+      }
+      /*
+також ми можемо окрім можливості стилізувати  сусідні елелемнти ми вже знаємо  що ми можемо стилізувати  елементи які знаходяться в середині якогочь іншого компонента(батьківського)-відповідно це просторовий селектор або space-селектор
+*/
+      div p {
+        color: cadetblue;
+      }
+
+      /*
+
+      тільки виділена частина буде замальована
+      */
+      div p span{
+        color: brown;
+      }
+
+
+
+      /*
+      Дочірній селектор -він вибирає елементи які  є  тільки прямими нащадками,потребує прмого нащадка,якщо ми пропустимо хоча б одну ланку ,то це йкомпонент не може застилізоватим 
+      */
+
+div>span{
+    color: burlywood;
+}
+/*
+Якщо є змішана та велика структура ,як звернутись до конкретних  тегів ,клікнути на них і побачити шлях і уточнити що у div є  div  в якому знаходиться параграфи
+*/
+div>div>p{
+    color: blue;
+}
+    </style>
+  </head>
+  <body>
+    <!---->
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <p>Dolores voluptatem quia delectus rerum veritatis!</p>
+    <p>Sequi dolores dignissimos voluptate officiis quo.</p>
+    <p>Praesentium ad commodi numquam! Eum, tempora?</p>
+    <p>Quaerat iusto ad culpa hic omnis.</p>
+    <p>Dicta soluta quis perferendis quos neque!</p>
+    <div>
+      <p>Lorem ipsum dolor,<span> sit amet consectetur </span>adipisicing.</p>
+      <p>Accusantium quos voluptas minima nihil inventore ex.</p>
+      <p>Maxime facere assumenda, reprehenderit mollitia asperiores iure?</p>
+      <p>Dignissimos, laborum ducimus aperiam numquam totam quod.</p>
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Pariatur aliquid minima totam repudiandae numquam.</p>
+        <p>Natus voluptatibus nulla expedita? Laborum, neque?</p>
+        <p>Voluptatem blanditiis ipsam assumenda atque aut!</p>
+        <p>Minus delectus nulla quasi aliquid dolorum.</p>
+        <p>Libero consequuntur consequatur recusandae dolorum sed!</p>
+        <p>Ad maiores ut voluptas. Error, iste!</p>
+      </div>
+      <p>Optio dignissimos officia repellendus iste pariatur eveniet.</p>
+      <p>Recusandae similique cupiditate, natus deleniti fugiat nostrum?</p>
+    </div>
+    <!---->
+    <!---->
+  </body>
+</html>

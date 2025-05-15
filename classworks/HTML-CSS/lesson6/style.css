@@ -1,0 +1,19 @@
+p {
+    /*
+       1) застосування шрифтів
+        У випадку якщо з якихось причин цей шрифт не відобразиться браузеру
+         ми можемо через кому зазначити альтернативний шрифт
+         Якщо вставити елемент кирилицею він буде виглядати по іншому ,тому 
+         щоб він використовувався для всіх елементів необхідно його імпортувати 
+         для цього використовуємо ресурс -google.font s-https://fonts.google.com
+        */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  /*
+    підключенн ягугл- шрифтів
+    */
+  .special-gothic-expanded-one-regular {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }

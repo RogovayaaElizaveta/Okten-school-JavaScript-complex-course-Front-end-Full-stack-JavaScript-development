@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson1.4-Різновиди елементів</title>
+    <link rel="stylesheet" href="/classworks/HTML-CSS/lesson4/style.css">
+    <style>
+        span.symbol{
+        color: coral;
+        font-size: 50px;
+        }
+
+        body{
+            background-color: lightgreen;
+            opacity: 0.5;
+            /*
+            застосування в стилях напівпрозорості щоб фон який є ззаду просвітлявся -- у нас є два варіанта задавати напівпрозорість
+             1) параметр - opasity-елемент стане напівпрозорим і текст в тому числі
+            ,2) ми можемо скористатись RGB-шкалою та задати там альфа-канал-google color picker
+            */
+        }
+        p{
+            /*
+            задаєм кольор за допомогою HEX-ШКАЛИ RGB
+
+            четвертим параметром можемо вказати прозорість  в даномі прикладі з RGBa--шкала
+             де четвертий параметр означає альфа-шкалу,яка визначає альфа-канал,та визначає
+              прозорість та вимірюється за шкалою від 0 до 1 або проміжні значення через крапку до 1-ці
+             background-color: rgba(252, 186, 3,0.576);
+            */
+            background-color: #6dd1c7;
+           
+
+            /*
+            зовнішній відступ зверху та зліва
+            */
+            margin-top: 40px;
+            margin-left: 20px;
+            margin-bottom: 60px;
+            margin-right: 50px;
+            /*
+            Обеднання в одну властивість 
+           */
+           margin: 40px 50px 60px 20px;
+           /*
+           виставлення внутрішніх відступів
+           */
+           padding:0 ;
+        }
+
+    </style>
+</head>
+<body>
+    <hr>
+    <!--параграфи відображаються кожен з нового рядочка а спени в один рядок це відбувається через різний
+     тип відображення ,а саме рядковий та блочний,рядкові теги це до прикладу - <span> , <a> , <br>  вони розміщюються поряд з текстом 
+        і по факту займпють лише той простір  який необхідний для вмісту тексту всередині них -  є також блочні до них належат <p> ,заголовки 
+             і тд блочні теги створюють своєрідний окремий блок що розтягується на всю доступну ширину не
+              дивлячись на те скільеи по факту контенту є  в них, кожен з них займає весь доступний простір по ширині-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, cum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, culpa.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, nobis?</p>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, magnam!</span>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <!--додавання зоображення -->
+    <img src="https://images.unsplash.com/photo-1741761446510-7804410eade3?q=80&w=3089&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    <!--швидка генерація структури  на початкових єтапах--- приклад -- p*10 >{hello} - 10 параграфів всередині яких буде написано слово hello, p*10>Lorem3-->
+
+
+    <!--Використання спец-символів бо задекларовані символи наприклад для
+     позначеня тегів не мозна пргосто так в контенті використовувати  - спецсимволи HTML
+       - span - працює з будь-якими символами -->
+     <span class="symbol">&#169;</span>
+</body>
+
+</html>

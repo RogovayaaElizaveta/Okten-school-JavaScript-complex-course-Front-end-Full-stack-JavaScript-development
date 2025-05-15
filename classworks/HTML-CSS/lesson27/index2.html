@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+наприклад ми хочемо в кінці цих елементів додати контент 
+*/
+      ul li::after {
+        content: "!!!!!"; /*
+    !!!!!-це псевдоелементи ,які створені за допомогою css,ми їх не зможемо виділити на сторінці якщо захочемо 
+    */
+        color: blueviolet;
+      }
+
+      /*
+у нас є змога поставити якийсь контент перед елементами 
+також ми можемо створити свої маркери ,для цього необхідно 1)по перше відключити стандартні маркери 
+*/
+      ul,
+      li {
+        list-style-type: none;
+      }
+      /*
+коли ми прописуємо list-style-type ,маркери пропадають ,а місця де вони були залишається
+*/
+      ul {
+        padding-inline-start: 0;
+      }
+
+      /*
+для створення свого маркеру картинки необхідно вказати розмір 
+*/
+      /*ul li::before{
+    content: "@@@";
+    color: aqua;
+}
+    */
+
+      ul li::before {
+        width: 10px;
+        height: 10px;
+        content: "";
+        display: inline-block;
+        background-image: url(/classworks/HTML-CSS/lesson27/icons8-звезда-48.png);
+        background-size: cover;
+
+        /*
+    зоображення спочатку не буде відображатись ,тому що це рядковий елелмент,тобто має відображення display-inline,
+    ми памятаємо що коли ми працюємо з інлайновими компонентами,то вони не мають ні ширини ні довжини ні висоти
+    Для того щоб елемент занходився в одному рядочку з текстом який знаходиться після нього і при цьому всьому  підтримував ті самі властивості
+    */
+      }
+
+      /*
+*/
+
+      /*
+*/
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Eveniet sit tenetur pariatur magnam?</li>
+      <li>Veniam tempore perferendis harum sapiente!</li>
+      <li>Ex ea quibusdam dicta deserunt?</li>
+      <li>Expedita explicabo perspiciatis facere id.</li>
+      <li>Adipisci labore reiciendis quaerat vero?</li>
+    </ul>
+    <!---->
+    <!---->
+    <!---->
+  </body>
+</html>

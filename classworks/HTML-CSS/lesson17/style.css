@@ -1,0 +1,395 @@
+/*
+обнуляем стили
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  border: none;
+}
+.w-1070 {
+  width: 1070px;
+  margin: 0 auto;
+}
+/*
+*/
+
+/*
+-------------------------HEADER----------------------------------------------------------------
+*/
+/*
+header- гнучкий контейнер 
+*/
+header {
+  display: flex;
+  justify-content: space-between; /*
+  для того щоб елементи розсунулись по краям контейнера
+  */
+  align-items: center;
+  padding-top: 30px;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/*
+Окремо коли ми працюємо з книпкою потрібно задавати ще що ми обираємо стандартну рамку- boder-none
+*/
+button {
+  text-decoration: none;
+  border: none;
+  background: #ff7143;
+  color: #fff;
+  text-align: center;
+  width: 211.02px;
+  height: 60px;
+  flex-shrink: 0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 10px;
+}
+
+header nav a {
+  font-style: normal;
+  line-height: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: -0.47px;
+}
+/*
+------------------далі потрібно пункт меню виділити іншим кольором і під ним додати підкреслення---------------------------
+У нас є два варіанта як це зробити - 1)у нас є властивість text-decoration -яка дозволяє нам 
+додати  типи як нижнє підкреслення ,але в такому випадку  ми не можемо контролювати колір цього підкреслення і його товщину (можемо але разом з текстом ),
+ми зробимо це як нижню рамку 
+
+*/
+/*
+ми застосовуємо до того елемента який є активним 
+це не при наведені це коли посилання акивне 
+*/
+.header__active-link {
+  /*
+  зазначаємо що колір тексту у нас зміниться 
+  */
+  color: #19191b;
+  border-bottom: 2px solid #5454d4;
+}
+
+/*
+--------------------------------SECTION---hero-------------------------------------------------------
+
+*/
+/*
+аналізуємо чи є відступ зверху 
+*/
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 68px;
+}
+.hero div h1 {
+  color: #19191b;
+  font-family: "DM Sans";
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 77px; /* 102.667% */
+  letter-spacing: -2.501px;
+  width: 439.411px;
+  height: 231px;
+  flex-shrink: 0;
+}
+/*
+текст має зверху - 30px і знизу - 50px відступ -відштовхує елементи довкола себе
+*/
+.hero div p {
+  color: #696871;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 150% */
+  letter-spacing: -0.625px;
+  width: 409.426px;
+  margin: 30px 0 50px 0;
+}
+/*
+для тексту в кнопці характеристики прописуються окремо ,тому їх також не забуваємо прописувати або з фігми брати 
+*/
+.hero button.button_hero {
+  border-radius: 10px;
+  background: #5454d4;
+  width: 188.211px;
+  height: 60px;
+  flex-shrink: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.531px;
+
+  border: none;
+}
+
+/*
+-------------------SECTION BRANDS LOGOS -----------------------------------------------------
+*/
+section.brands_logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 212px 0px 160px 0px;
+}
+
+/*
+-----------------------SECTION GROUP 2-----------------------------------------------------
+*/
+section.Group_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.Group_2 div h1 {
+  color: #19191b;
+  font-family: "DM Sans";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 57px; /* 114% */
+  letter-spacing: -1.563px;
+  width: 556px;
+}
+section.Group_2 div p {
+  color: #696871;
+  font-family: Mulish;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 150% */
+  letter-spacing: -0.625px;
+  width: 459px;
+  margin: 30px 0px 30px 0px;
+}
+section.Group_2 div a {
+  color: #5454d4;
+  font-family: "DM Sans";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.531px;
+  text-decoration-style: none;
+}
+
+/*
+-----------------------SECTION DEPTH-METRIX-----------------------------------------
+*/
+section.depth-metrix {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.depth-metrix img {
+  margin-top: 262px;
+}
+section.depth-metrix div {
+  margin-top: 205px;
+}
+section.depth-metrix div h1 {
+  color: #19191b;
+  font-family: "DM Sans";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 57px; /* 114% */
+  letter-spacing: -1.563px;
+  width: 409px;
+}
+
+section.depth-metrix div p {
+  color: #696871;
+  font-family: Mulish;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 150% */
+  letter-spacing: -0.625px;
+  width: 409px;
+  margin: 30px 0px 30px 0px;
+}
+section.depth-metrix div a {
+  color: #5454d4;
+  font-family: "DM Sans";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.531px;
+  text-decoration-style: none;
+}
+
+/*
+----------------------------------SECTION -Logos_things ----------------------------------------
+*/
+section.Logos_things div {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+section.Logos_things div.Benchmarks h1 {
+  color: #19191b;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 150% */
+  letter-spacing: -0.75px;
+}
+section.Logos_things div.Benchmarks p {
+  color: #696871;
+  text-align: center;
+  font-family: Mulish;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.5px;
+  width: 307px;
+  margin: 20px 0px 0px 0px;
+}
+
+section.Logos_things div.Pricing_Audit h1 {
+  color: #19191b;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 150% */
+  letter-spacing: -0.75px;
+}
+section.Logos_things div.Pricing_Audit p {
+  color: #696871;
+  text-align: center;
+  font-family: Mulish;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.5px;
+  width: 307px;
+  margin: 20px 0px 0px 0px;
+}
+
+section.Logos_things div.Retention_Audit h1 {
+  color: #19191b;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 150% */
+  letter-spacing: -0.75px;
+}
+section.Logos_things div.Retention_Audit p {
+  color: #696871;
+  text-align: center;
+  font-family: Mulish;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.5px;
+  width: 307px;
+  margin: 20px 0px 0px 0px;
+}
+
+/*
+---------------------------SECTION section Content-----------------------------------
+*/
+section.Content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.Content h1 {
+  color: #19191b;
+  font-family: "DM Sans";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px; /* 116.667% */
+  letter-spacing: -1.876px;
+  width: 523px;
+  margin-top: 150px;
+}
+section.Content div {
+  width: 344px;
+  height: 65px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #f7f7fb;
+  margin-top: 204px;
+}
+section.Content div button {
+  border-radius: 10px 0px 0px 10px;
+  background: #5454d4;
+  width: 160px;
+  height: 55px;
+  flex-shrink: 0;
+}
+
+/*
+------------------------SECTION pricing ---------------------------------------
+*/
+section.Content  {
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+}
+div.Starter {
+  width: 330px;
+  height: 441px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #f8f8f8;
+}
+
+div.Premium {
+  width: 330px;
+  height: 441px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #d43030;
+}
+div.Enterprise {
+  width: 330px;
+  height: 441px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #77ce1a;
+}
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/homeworks/HTML-CSS/hw-1/style.css" />
+    <style>
+      .item {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border-top: 5px solid green;
+        border-bottom: 5px solid rgb(77, 237, 77);
+        border-right: 5px solid rgb(2, 49, 2);
+        border-left: 5px solid rgb(168, 244, 168);
+        animation: preloader  6s linear infinite alternate;
+      }
+      @keyframes preloader {
+        from {
+          transform: rotate(360deg);
+        }
+        to {
+          transform: rotate(180deg) scale(1.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="item"></div>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus placeholder</title>
+    <link rel="stylesheet" href="/classworks/HTML-CSS/lesson28/style.css" />
+    <style>
+      /*
+        */
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      form sup {
+        color: red;
+      }
+      /*
+      ми можемо або задати розмір або заблокувати можливість задати розмір -resize-none
+        */
+      textarea {
+        resize: none;
+        width: 150px;
+      }
+      /*
+        */
+
+      /*
+        */
+
+      /*
+        */
+      /*
+        */
+    </style>
+    <style>
+      /*
+        ----------------------------srtyle for lesson 29  Focus placeholder------------------------------------
+        */
+      /*
+        стилізація форми (ми це можемо зробити за допомогою -селектором тегу , за класом )
+        */
+      form.form {
+        border: 3px solid lightgreen;
+        width: 30%;
+        border-radius: 20px;
+        padding: 50px;
+      }
+      /*
+стилізація input  певного типу
+placeholder в input  им стилізуємо окремо
+*/
+      input[type="text"] {
+        background-color: rgb(5, 103, 70);
+        border: 2px solid greenyellow;
+        border-radius: 10px;
+        color: blue;
+      }
+      /*
+      placeholder - стилізація(псевдоелемент)
+      */
+      input[type="text"]::placeholder {
+        color: blue;
+      }
+      /*
+      Принаведені синя рамочка при натисканні , ми можемо її підкорегувати під себе
+      стилізуємо саме стан фокусування ,зазаначаємо що саме унас зміниться ,синя рамка,
+      це не рамка а outline (цн рамка яка знаходиться  поверх border),тобто унас є звичайна рамка яка формується з властивості border
+
+      відповідно ми вкажемо що коли ми фокусуємся на  полі з типом текст у нас формується outline (вказуємо вній такі самі параменти як вказуємо присторенні рамки)
+      */
+      input[type="text"]:focus {
+        outline: 2px solid lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form">
+      <!--p призначений для того щоб додавати абзац тексту на сторінку,але для підпису іконочок ми використовуємо тег - lable - 1)По перше він має цільове семантичне призначення-->
+      <label for="name">Введіть своє імя</label>
+      <!--тег lable  є inline-блочним ,за рахунок цього компнент input ідображається біля нього,1) перший спосіб прямо в середину тегу вставляти 
+       Ми можемо зробити привязку до цього lable ,для цього необхідно для цього додати ще ідентифікатор  та використати  for-->
+      <input
+        type="text"
+        name="name"
+        placeholder="name"
+        id="name"
+        required
+      /><sup>*</sup>
+
+      <label for="email">Введіть сво email</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="email@example.com"
+        id="email"
+        required
+      /><sup>*</sup>
+
+      <label for="password">Введіть сво password</label>
+      <input
+        type="password"
+        name="password"
+        placeholder="qwerty"
+        id="password"
+        required
+      /><sup>*</sup>
+
+      <!--Ми можемо також тут зазначити максимальне і мінімальне значення-->
+      <label for="age">Введіть сво age</label>
+      <input
+        type="number"
+        name="age"
+        placeholder="age"
+        id="age"
+        min="18"
+        max="55"
+        required
+      />
+      <!--Просимо користувача завантажити файл и тд -->
+      <input type="color" />
+      <input type="checkbox" />
+      <input type="date" />
+      <input type="datetime" />
+      <input type="file" />
+      <input type="hidden" />
+      <input type="image" />
+      <input type="month" />
+      <input type="search" />
+      <input type="radio" />
+      <input type="reset" />
+
+      <!--Вибір користувача між двома варіантами -radio-button / checkbox-->
+      <label>Gender</label>
+      <!--для радіо-батонів які обєднані якоюсь тематикою ,щоб був вибір необхідно щоб співпадав name-->
+      <lable><input type="radio" name="gender" value="male" />MEN</lable>
+      <!-- атрибут value (транслітерувати,або пояснити значення ) -->
+      <lable><input type="radio" name="gender" value="female" />WOMEN</lable>
+      <!--Тепер попросимо користувача підписатись на розсилку ,новини-->
+      <label>
+        <input type="checkbox" name="newslatter" />Підписатись на новини
+      </label>
+      <!--Списки випадаючі,попросимо користувача зробити вибір-->
+      <label>Country</label>
+      <!--Кожен варіант в середині цього селекту повинен бути позначений як option-->
+      <select id="lorem">
+        <!-- атрибут value який за аналогією з radiobutton повинен позначити що саме за текст тут написаний-->
+        <option value="">Оберіть країну</option>
+        <option value="ua">Укр</option>
+        <option value="pol">Пол</option>
+        <option value="cheh">Чех</option>
+        <option value="moldva">Молдов</option>
+      </select>
+      <!--Групування варіантів які знаходяться в середині списку-->
+      <label for="">Phone</label>
+      <select id="Phone">
+        <optgroup label="Apple">
+          <option value="">Iphone</option>
+          <option value="">Laptop</option>
+        </optgroup>
+        <optgroup label="Asus">
+          <option value="">Iphone</option>
+          <option value="">Laptop</option>
+        </optgroup>
+        <optgroup label="Sumsung">
+          <option value="">Iphone</option>
+          <option value="">Laptop</option>
+        </optgroup>
+      </select>
+      <!--Пишемо коментар  ,rows - кількість рядочків  cols"-кількість символів-->
+      <label for="comment"></label>
+      <textarea form="comment" rows="4" cols="30"> </textarea>
+      <div>
+        <!-- атрибут value  для зміни тексту на кнопці,тест на кнпці формується в залежності відмови браузера з яким ми працюємо-->
+        <input type="submit" value="" />
+        <!--скидання форми-->
+        <input type="reset" />
+      </div>
+    </form>
+    <!--Для того щоб уточнити для чого саме створене вікно через input необхідно вказати,нам необхідно вказати атрибути щоб охарактеризувати поле ,1)перше це атрибут  type (яку саме інформацію від користувача ми очікуємо),далі наступним обовязковим атрибутом необхідно вказати name (який визначає як саме буде називатися це віконце з input  вже на серверній частині )-->
+    <!--Длятого щоб на сервері ми отримали інфрмацію в форматі своєрідної анкети-->
+    <!--Для додавання тексту прямо в самий  input використовуємо placeholder-->
+    <!---->
+    <!---->
+    <!---->
+  </body>
+</html>

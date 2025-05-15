@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Стилізація checkbox/radio</title>
+    <style>
+      /*
+     для того щоб створити  віконечко в    checkbox в середині якого у нас буде зявлятись галочка ,по перше треба спочатку придумати що буде зявлятись в середині 
+        */
+      /*
+   для того щоб попрацювати з      input  щоб зхявилась рамка довколанього ,ми працюємо з псевдокласом focus,з кнопкою  button  псевдоклас   active, radiobutton and checkbox ми працюємо з псевдокласом checked
+        */
+      .checkbox {
+        /*
+            таким чином ми просто відключаємо  усі його стандартні стилі 
+            */
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 1px solid gray;
+        /*
+            ставимо їх на один рівень
+            */
+        margin-bottom: -2px;
+
+        border-radius: 2px;
+      }
+
+      .checkbox:checked {
+        background-color: beige;
+        background-image: url(/classworks/HTML-CSS/lesson27/icons8-звезда-48.png);
+        background-size: cover;
+        display: inline-block;
+      }
+      /*
+        спочатку колір не зпрацює ,тому що треба по перше відключити всі стандартні браузерні стилі і тільки потім зформувати повністю заново елемент 
+        */
+
+      /*
+
+      -----------------radio
+        */
+
+      /*
+      аналогічне ми можемо робити із радіо-кнопками ,але для цього окремо задається заокруглювати радіус до 50%
+        */
+      .radio {
+        /*
+            таким чином ми просто відключаємо  усі його стандартні стилі 
+            */
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 1px solid gray;
+        /*
+            ставимо їх на один рівень
+            */
+        margin-bottom: -2px;
+
+        border-radius: 2px;
+      }
+
+      .radio:checked {
+        background-color: beige;
+        background-image: url(/classworks/HTML-CSS/lesson27/icons8-звезда-48.png);
+        background-size: cover;
+        display: inline-block;
+        border-radius: 50%;
+      }
+      /*
+        */
+    </style>
+  </head>
+  <body>
+    <!---->
+    <label> <input type="checkbox" class="checkbox" />YES </label>
+    <!---->
+    <label> <input type="radio" class="radio" />YES </label>
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+  </body>
+</html>

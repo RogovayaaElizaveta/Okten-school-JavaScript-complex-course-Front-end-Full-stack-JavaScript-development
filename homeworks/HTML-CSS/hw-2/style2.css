@@ -1,0 +1,18 @@
+.flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(245, 205, 145);
+    gap: 40px;
+    height: 200px;
+}
+.item{
+    background-color: brown;
+    width: 60px;
+    height: 60px;
+}
+.item:hover{
+    border-radius: 40px;
+    background-color: gray;
+}

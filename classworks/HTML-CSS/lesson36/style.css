@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+аналіз макету 
+*/
+
+/*
+тепер по body рівняємо всі компоненти 
+*/
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h2 {
+  color: #142823;
+  text-align: center;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.cards {
+  padding: 39px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 128px;
+}
+/*
+inline-flex - це властивість яка не фіксує розмір компонента ,
+\тобто залишає їхнє поле повністю інлайновим ,і при цьому всьому
+ розміщає в середині контейнера гнучку,ну тобто ми знаємо що є 
+ інлайнові компоненти ,ми зеаємо що їхня фішка в тому що вони не 
+ підтримують значення ні ширини ні довжинни , в такому випадку
+  ширина і довжина не застосується ,тоді просто додати компоненти в 
+  середину та розставити простір який є довкола за допомогою padding,другий варіант це 
+*/
+.card {
+  width: 245px;
+  height: 291px;
+  padding: 20px;
+  /*
+    border-box,
+    box-sizing
+    ми не пишемо ,тому що навпаки тут ще є padding ,які розширять картку
+    */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 32px;
+  background: var(--White, #fff);
+
+  /* 200 */
+  box-shadow: 0px 4px 20px 0px rgba(139, 139, 139, 0.1);
+  position: relative;
+}
+
+.hight_rates {
+  position: absolute;
+  top: -30px;
+}
+.title_card {
+  color: var(--Neutral--50, #282828);
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 245px;
+}
+#blue {
+  color: var(--Primary-600, #106fdf);
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#red {
+  color: #dd152d;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

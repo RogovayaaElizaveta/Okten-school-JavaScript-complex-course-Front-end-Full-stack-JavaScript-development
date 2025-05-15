@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid templte areas</title>
+    <link rel="stylesheet" href="/classworks/HTML-CSS/lesson 44/style.css" />
+    <style>
+      * {
+        margin: 0;
+      }
+      .grid {
+        height: 100vh;
+        display: grid;
+        /*
+        Тепер нам необхідно всі компоненти обєднати в даному контейнері ,для цього ми зазаначаємо 
+        Тепер ми виділяємо скільки у нас колонок і рядків повинно бути 
+        */
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 20% 60% 20%;
+        /*
+      Тепер фррмуємо а тепер формуєм всі ці компонентив грід-простір ,в лапках перераховуємо компонети 
+      які будуть знаходитися у першому рядочку (обовязково треба заповнити всі три стовця)
+      */
+        grid-template-areas:
+          "header header header"
+          "aside1 main aside2"
+          "footer footer footer";
+      }
+
+      /*
+        Ми вкажемо що унас є хедер ,що в грід-просторі він називатиметься (для цього ми використовуємо властивість grid-area )
+        */
+      header {
+        grid-area: header;
+        background-color: #d9d9d9;
+      }
+      /*
+        Далі у нас є aside ,але є проблема ,у нас два aside і відповідно нам потрібно чітко виділити що в нас буква штальта та ішта 
+        ,в такому випадку нам все ж потрібно їх повідрізняти за допомогою тиг же класів або можна використовувати nth-child
+        */
+      .left-aside {
+        grid-area: aside1;
+        background-color: #c0bdbd;
+      }
+      .right-aside {
+        grid-area: aside2;
+        background-color: #c0bdbd;
+      }
+      main {
+        grid-area: main;
+        background-color: #a4a4a4;
+      }
+      footer {
+        grid-area: footer;
+        background-color: #d9d9d9;
+      }
+      /*
+      ми не будемо виносити адаптацію в окремий файл ,АЛЕ ЇЇ ОБОВЯЗКООР ПОТРІБНО ВИНОСИТИ В ОКРЕМИЙ ФАЙЛ 
+        */
+      @media screen and (max-width: 480px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(4, 1fr);
+          grid-template-areas:
+            "header header "
+            "aside1  aside2"
+            "main main "
+            "footer footer ";
+        }
+      }
+      /*
+        */
+      /*
+        */
+    </style>
+  </head>
+  <body>
+    <!--А якщо нам необхідно зробити якусь структуру,що якщо нам потрібно щоб там був 
+зверху один окремий блок ,нажаль за допомогою - grid-template-columns: repeat(4,300px); 
+,  grid-template-rows: repeat(2,300px)  ось аткого розподілу ми не можемо це зробити 
+,тому нам необхідно використати ті ж грід-контейнери ,але вже дещо в ширшому конетексті 
+,а саме побудувати своєрідний грід-простір-->
+
+    <!--Нам для цього необхідно  спочатку просто відтворити структуру яка внас є -->
+
+    <!--Нам необхідно всі ці компоненти сформувати в один простір ,але для того щоб
+    їх додати в цей грід-простір кожен з цих компонентів повинент якось у ньому 
+    називатися ,мати свою назву з якого сформуємо цей грід-простір -->
+    <div class="grid">
+      <header></header>
+      <aside class="left-aside"></aside>
+      <main></main>
+      <aside class="right-aside"></aside>
+      <footer></footer>
+    </div>
+
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+  </body>
+</html>

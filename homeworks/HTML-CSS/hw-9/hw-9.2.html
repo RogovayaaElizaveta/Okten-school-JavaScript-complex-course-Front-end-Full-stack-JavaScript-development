@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/homeworks/HTML-CSS/hw-9/style.css" />
+    <style>
+      * {
+        margin: 0;
+      }
+      .grid {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1.5fr 1fr;
+       grid-template-rows: 1fr 1.2fr 1.3fr 1fr;
+       grid-template-areas:'header header header' 
+       'left-aside   tops  right-aside'
+       'left-aside bottoms right-aside'
+       'footer footer footer';
+      }
+      header {
+        background: #D9D9D9;
+       grid-area: header;
+      }
+      .left-aside{
+      grid-area:left-aside ;
+      background: #C0BDBD;
+    }
+    .right-aside{
+        grid-area:right-aside;
+        background: #C0BDBD;
+    }
+      .tops{
+grid-area:tops ;
+background: #A4A4A4;
+      }
+      .bottoms{
+        grid-area: bottoms;
+        background: #A4A4A4;
+      }
+      footer{
+grid-area:footer ;
+background: #D9D9D9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <header></header>
+      <aside class="left-aside"></aside>
+      <section  class="tops"></section>
+      <section class="bottoms"></section>
+      <aside class="right-aside"></aside>
+      <footer></footer>
+    </div>
+  </body>
+</html>

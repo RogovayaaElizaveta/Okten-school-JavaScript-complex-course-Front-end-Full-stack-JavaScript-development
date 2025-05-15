@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson-1.8-Рамки,градієнти,hover,transition</title>
+    <link rel="stylesheet" href="/classworks/HTML-CSS/lesson8/style.css" />
+    <style>
+      .wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        /*
+        властивість для автоматичного перенесення
+        */
+        /*
+        це означатиме що якщо у нас буде контейнер 
+        переповнений ,то у нас повинен бути автоматичний перенос
+        */
+        flex-wrap: wrap;
+      }
+      .item a {
+        /*
+        використовуємо властивість для обнулення декорації
+        */
+        text-decoration: none;
+        color: white;
+      }
+      .item {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        -webkit-box-shadow: 5px 5px 22px 5px #000000;
+        box-shadow: 5px 5px 22px 5px #000000;
+        /*
+        заокруглення елемента
+        */
+        border-radius: 15px;
+        /*
+        формування рамки за допомогою  2-3 параметрів - перший параметр визначає 
+        товщину рамки ,другий -тип рамки ,в залежності від параметра може бути різною 
+        ,звичайною або хвилястою і тд ,третій- визначає колір рамки
+        */
+        border: 3px solid black;
+        /*
+        тут два рядка тому що у випадку якщо 
+        не відобразиться градіент то щоб елемент мав все ж таки якийсь 
+        колір,застосується властивість яка була написана перед цим
+        */
+        background: #2a7b9b;
+        background: linear-gradient(
+          90deg,
+          rgba(42, 123, 155, 1) 0%,
+          rgba(87, 199, 133, 1) 50%,
+          rgba(237, 221, 83, 1) 100%
+        );
+        
+        /*
+        прописуємо для плавного повернення назад 
+        */
+        transition: 1s;
+        /*
+        hover ,(нехай вони будуть розпрямляти і знову ставати квадратами)
+       щоб використати  ми ставимо двокрапку-:
+        */
+        /*
+        зміна характеристики елемента з яким ми взаємодіємо
+        */
+      }
+      .item:hover {
+        border-radius: 0;
+        border: 16px dotted rgb(225, 28, 28);
+        /*
+        через параметр трансформ вказуємо що ми хочемо збільшити
+         елемент вдвічі,1-це стандартний розмір елемента,1.1-збільшить елемент на 50%
+         якщо написать менше за одиницю-то елемент буде зменшуватись 
+        */
+        transform: scale(2);
+
+        /*
+        передаємо плавність та передаємо за скільки секунд він її отримає
+        */
+        transition: 1s;
+      }
+      /*
+      зри наведені на елемент зміна кольора посилання
+      item:hover-та частина яка взаємодіє  і   a  та яка буде міняти колір 
+
+      або змінювати характеристики елемента який знаходиться 
+      всередині елемента з яким відбувається взаємодія
+      */
+      .item:hover a {
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <!--створення елементу з класом гарячі клав- div.wrapper , div*5.item -->
+    <!--https://cssgradient.io- site for generate gradient css -->
+    <!--https://alvarotrigo.com/shadow-gradients/,https://www.cssmatic.com/box-shadow - генератор тіні-->
+    <div class="wrapper">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item">
+        <a href="#">link</a>
+      </div>
+    <!--У випадку переповненості елементів ми можемо 
+    вказати що у нас повинно бути автоматичне перенесення ,дана властивість працює на основі flex-->
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

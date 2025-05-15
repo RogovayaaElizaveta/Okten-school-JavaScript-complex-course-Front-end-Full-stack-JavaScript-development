@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Псевдо елеименти - before ,after</title>
+    <style>
+      /*
+        Наприклад ми бажаємо щоб прирізних станах кнопка у нас була різної стилізації ,а саме при наведені змінювався колір
+        */
+      button:hover {
+        background-color: aqua;
+      }
+
+      /*
+        також ми можемо вказати при кліці на кнопку ,використати псевдоклас active
+        */
+      button:active {
+        background-color: blueviolet;
+      }
+      /*
+        коли користувач відвідує сайт ,посилання змінює колір
+        коли посилання ще не відвідані ми можемо за псево класом вказаи яку стилізацію вони матимуть ,наприклад можемо прибрати підкреслювання знизу text-decoration - none 
+        */
+      a:link {
+        text-decoration: none;
+        color: aquamarine;
+      }
+      /*
+        а після того як ми відвідуємо якесь посилання,ми зазначаємо що там у нас зміниться
+        */
+      a:visited {
+        color: black;
+      }
+     
+      /*
+      змінюємо стилізацію маркерів у списках 
+      якщо ми вкажемо що ми зміюмо колір самих li ,то колір маркерів у нас зміниться також 
+      ,а якщо ми хочемо щоб маркери були якогось іншого кольору ,ми можемо використати псевдоелемент - (псевдоелемент тому що ми стилізуємо частину якогось контенту )
+      li::marker{
+      color:yellow;
+      }
+        */
+        li{
+        color: coral;
+       }
+       /*
+       Наприклад ми хочемо вказати що ми виділяємо шматочок параграфа,для цього ми можемо використати псевдоелемент 
+       ,тому що працюємо з частиною контенту який називається selection?після чого вказуємо характеристику
+       */
+p::selection{
+    background-color: tomato;
+    color: aliceblue;
+}
+    </style>
+  </head>
+  <body>
+    <button>Lorem, ipsum dolor.</button>
+    <!--взаємодія з посиланнями -->
+    <a href="https://fonts.google.com/selection/embed "></a>
+    <a href="https://www.work.ua/jobs/by-company/2643379/#jobs "></a>
+    <a href=" https://lms.ithillel.ua/employment/vacancies"></a>
+
+    <!---->
+    <ul>
+<li>Lorem.</li>
+<li>Enim?</li>
+<li>Nihil!</li>
+<li>Exercitationem!</li>
+<li>Dolor!</li>
+<li>Corrupti!</li>
+<li>Distinctio?</li>
+<li>Animi.</li>
+<li>Nemo.</li>
+    </ul>
+    <!---->
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, dolorem?</p>
+    <!---->
+  </body>
+</html>

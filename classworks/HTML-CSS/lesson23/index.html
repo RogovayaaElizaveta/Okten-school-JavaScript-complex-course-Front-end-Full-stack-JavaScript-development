@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Верстка макету -Burgers</title>
+    <link rel="stylesheet" href="/classworks/HTML-CSS/lesson23/style.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
+      </style>
+  </head>
+  <body>
+    <!--По перше одразу необхідно відрахувати ширину контенту який у нас є 
+   Ми можемо створити один фіксований контейнер для нашого сайту ,відповідно тримати у ньому наш контент,і в залежності від розміру сайту
+   1)Маленьке навігаційне меню-->
+    <!--Починаємо з того що ми просто створюємо абсолютно загальну обгортку для сайту-->
+    <div class="wrapper">
+      <!--Верхня частина навігаційне меню -->
+      <nav>
+        <ul>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="">MENU</a></li>
+           <li><a href="" class="order_link">Order Online</a></li>
+        </ul>
+      </nav>
+      <h1 class="header_title">NEW YORK’S FAVORITE ORGANIC HAMBURGER JOINT</h1>
+      <img  class="img_burger"   src="/classworks/HTML-CSS/lesson23/Burgers.png"alt="burger_img ">
+      <section class="section_burgers">
+        <h1>the burger above all burgers</h1>
+        <div class="div_burgers">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec ornare neque.</p>
+          <button>About Us</button>
+        </div>
+      </section>
+      <main class="main">
+        <div class="two_burgers_img">
+          <img src="/classworks/HTML-CSS/lesson23/Rectangle 17.png" alt="First_burgers">
+          <img src="/classworks/HTML-CSS/lesson23/Rectangle 16.png" alt="Second burgers">
+        </div>
+      </main>
+      <section class="Full_big section">
+        <img class="full_img"   src="/classworks/HTML-CSS/lesson23/Rectangle 21.png" alt="Full_image" >
+      </section>
+      <footer class="footer">
+        <h1>order online or come visit us today</h1>
+        <button>Get Started</button>
+      </footer>
+    </div>
+  </body>
+</html>

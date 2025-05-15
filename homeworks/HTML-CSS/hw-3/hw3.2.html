@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .section1 {
+        width: 100vw;
+        height: 50vh;
+        background-color: rgb(235, 120, 143);
+        border: 1px solid red;
+        text-align: center;
+      }
+      .section2 {
+        background-color: rgb(98, 91, 91);
+        width: 100vw;
+        height: 50vh;
+        border: 1px solid black;
+      }
+      .section1 h4 {
+        text-align: center;
+        color: black;
+      }
+      .section2 h4 {
+        text-align: center;
+        color: rgb(255, 255, 255);
+      }
+      .section2 p {
+        color: white;
+      }
+      /*
+      необхідно вказати що текст який знаходиться в середині секції не повинен займати весь простір
+      */
+      section p {
+        width: 70%;
+      }
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /*
+         додаємо    flex-direction: column; для того щоб елементи занходились один під одним
+        */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="section1">
+        <h4>Section title</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+          beatae atque nobis at molestiae soluta quis ut dicta distinctio
+          consequuntur.
+        </p>
+      </section>
+      <section class="section2">
+        <h4>Section title</h4>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
+          commodi aut repellat reprehenderit quia molestias non itaque
+          consequuntur nemo provident?
+        </p>
+      </section>
+    </div>
+  </body>
+</html>

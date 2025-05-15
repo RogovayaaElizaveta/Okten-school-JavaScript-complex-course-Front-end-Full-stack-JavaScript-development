@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/homeworks/HTML-CSS/hw-1/style.css" />
+    <style>
+      * {
+        margin: 0;
+      }
+      body {
+        padding: 20px;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+      header,
+      footer {
+        width: 96.7vw;
+        height: 50vh;
+        background-color: rgb(86, 148, 246);
+        text-align: center;
+      }
+      aside {
+        width:33vw;
+        height: 50vh;
+        background-color: blue;
+        text-align: center;
+      }
+      main {
+        width: 33vw;
+        height: 50vh;
+        background-color: blue;
+        text-align: center;
+      }
+      header,footer,aside,main{
+        color: white;
+        font-size: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /*
+      У нас є простір ,але цього простору ні з права ні з ліва ,тому нам необхідно розмістити перший і останній впритик до країв їхнього батьківського елемента 
+      */
+    </style>
+  </head>
+  <body>
+    <header>Widgets</header>
+    <div class="wrapper">
+      <aside>Big Widgets</aside>
+      <main>Bigger Widgets</main>
+      <aside>Huge Widgets</aside>
+    </div>
+    <footer>Contact</footer>
+  </body>
+</html>

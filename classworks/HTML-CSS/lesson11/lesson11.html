@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Списки</title>
+    <link rel="stylesheet" href="/classworks/HTML-CSS/lesson11/style.css">
+    <style>
+        /*
+        ми можемо вимкнути та створити свої маркери
+        list-style-type використовуємо властивість для декорації списків ,
+        який маркер ми бажаємо додати
+        */
+        ul{
+            list-style-type:georgian;
+        }
+       /*
+       вказуємо що нумерований список матиме інший тип декорації
+       */
+        ol{
+       list-style-type:upper-alpha;
+        }
+    </style>
+</head>
+<body>
+  <!--Усі однотипні елементи в html  в тому числі і меню оформлюються як список -->  
+
+<!--щоб створити список спочатк необхідно визначитись якого типу у нвс буде список (з маркерами чи нумерацією),якщо ми працюємо з маркерами ми використовуємо тег ul,кожен пункт списку повинен  бутиогорнутий у тег li(розшифровується як list-item)-->
+
+<!--якщо ми бажаємо зробити десь підпункти,то ми використовуємо ,то ми прямо в li створюємо ще один список -->
+<ul>
+    <li>Lorem ipsum dolor sit amet.
+        <ul>
+            <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+    </li>
+    <li>Architecto, a mollitia? Culpa, architecto.</li>
+    <li>Voluptatum itaque eveniet harum sapiente.</li>
+    <li>Libero rem adipisci quia eveniet.</li>
+    <li>Iste cupiditate earum officiis ex.</li>
+    <li>Eius sit architecto ex maxime.</li>
+    <li>Facere nulla totam aliquam vitae.</li>
+    <li>Laborum, sint. Laboriosam, ullam dolores.</li>
+    <li>Voluptatem maiores distinctio voluptatum aspernatur.</li>
+    <li>Nisi labore ducimus quia asperiores!</li>
+</ul>
+
+<!--Якщо ми бажаємо створити нумеровай список ,викорисовуємо тег <ol> -->
+<ol>
+   <li>Lorem ipsum dolor sit amet.</li>
+   <li>Reprehenderit labore voluptates quidem asperiores.</li>
+   <li>Facilis eveniet ducimus accusamus corrupti?</li>
+   <li>Quisquam id inventore repellendus! Nulla.</li>
+   <li>Quae omnis quis dolores velit.</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/*
+тег p має за замовчуванням властивість block
+*/
+/*
+inline-block- властивість яка дозволяє розміщати елементи в один рядок але при цьому зберігати їх параметр ширини
+*/
+p{
+    width:50% ;
+    background-color: antiquewhite;
+    height: 50px;
+    display: inline-block;
+}
+/*
+тег span  має властивість inline
+*/
+span{
+    width:50% ;
+    background-color: antiquewhite;
+    height: 50px;
+    display: inline-block;
+}
+/*
+тобто у нас є елементи блочні строчні та елементи якім ми самі можемо задавати тип за допомогою властивостей
+*/
+
+img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+/*
+object-fit:cover - для збереження пропорційності
+*/
+body{
+    background-image: url(/classworks/HTML-CSS/lesson4/img/image.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+/*
+cover - властивість для рівномірного розприділенн картинки 
+*/
+/*
+bgc-attachment-повністю нерухомим (фіксована)при скролі
+*/

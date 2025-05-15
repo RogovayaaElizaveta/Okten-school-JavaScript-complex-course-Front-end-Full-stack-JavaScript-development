@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position sticky</title>
+    <style>
+      .container {
+        width: 250px;
+        height: 200px;
+        border: 2px solid;
+        /*
+        overflow - якщо наприклад текст не вмістився в рамку ,то використовуємо властивість - overflow -  scroll
+        */
+        overflow: scroll;
+      }
+      header{
+        width: 100%;
+        height: 15%;
+        background-color: aqua;
+        /*
+        фіксуємо шапку ,але так він фіксується по відношенню до всієї сторінки ,якщо ми хочемо зафіксувати якийсь компонент по відношенню до однієї секції,блоку ,то позиціонування фіксід нам не підходе ,нам підійде position:sticky
+        */
+        position: sticky;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo enim
+          dolores quis assumenda dicta optio, ea dolor corporis quam dolorem
+          itaque tenetur incidunt ab alias voluptas accusamus omnis rem suscipit
+          est ipsa pariatur porro. Ut quisquam, sit numquam itaque error animi
+          fuga explicabo, earum iure molestiae dolor officia sunt, est quo.
+          Voluptatum rerum non sapiente nesciunt, distinctio porro molestiae quo
+          quibusdam omnis a quam sed facilis facere voluptatem numquam delectus
+          cupiditate amet. Molestiae dolores a alias repudiandae enim
+          accusantium pariatur voluptas, praesentium voluptatum veritatis
+          doloribus dolor blanditiis facere numquam veniam tempora atque vel
+          similique in laudantium, assumenda quasi quaerat saepe?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

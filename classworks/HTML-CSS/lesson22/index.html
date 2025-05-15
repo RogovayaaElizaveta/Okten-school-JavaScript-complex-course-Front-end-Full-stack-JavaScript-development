@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Order</title>
+    <link rel="stylesheet" href="/classworks/HTML-CSS/lesson22/style.css" />
+    <style>
+        /*
+
+        тепер коли чорний перемістився вперед ,всі інші мають індекс 1 
+        */
+      .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+      .card {
+        width: 200px;
+        height: 200px;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .red {
+        background-color: red;
+      }
+      .pink {
+        background-color: palevioletred;
+      }
+      .black {
+        background-color: black;
+        order: -1;
+      }
+      .green {
+        order: 2;
+        background-color: greenyellow;
+      }
+      .yellow {
+        order: 1;
+        background-color: yellow;
+      }
+      /*
+      Зо допомогою стилізації ми можемо змінювати елементи місцями ,кожен з компонентів які у нас є має свій індекс,нумерацію,кожен з цих елементів має індекс за замовчуванням -0 ,якщо ми бажаємо щоб якийсь компонент став перед цим компонентом (наперед ,нам потрібно,зазначити своєрідний індексякий буде менше за нуль,це працює тільки в межах flex-контейнера)
+      */
+    </style>
+  </head>
+  <body>
+    <!---->
+    <!---->
+    <!---->
+    <div class="flex">
+      <div class="card blue"></div>
+      <div class="card red"></div>
+      <div class="card green"></div>
+      <div class="card yellow"></div>
+      <div class="card pink"></div>
+      <div class="card black"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Абсолютне позиціонування</title>
+    <style>
+      .item {
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+        position: absolute;
+        top: 0;
+        left: 0;
+       z-index: -1;
+      }
+      /*
+      absolute працює таким чином що він робить компонент таким собі привидом який може опинитисяв будь-якому місця на
+       сторінці і прицьому свьому ігнорувати іншу компоненти ,ми його також контролюємо за допомогою z-index та  top,bottom.left,right
+      */
+
+      /*
+      Наприд ми мочемо вказати щоб цей блок опинився зверху сторінки  для цього ми зазначаємо що ми його  хочемо прикріпити до верхньої межі ,таким чином щоб відступу там не було зовсім 
+      */
+      /*
+      як розуміти де межі цього компонента ,якщо компонент який має position :absolute не має ніякого батьківського компонета який має позиціонування відмінне від статичного,то тоді він буде рівнятися по  body
+      */
+      /*
+      */
+      /*
+      */
+      /*
+      */
+    </style>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div class="item"></div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Ipsum consequatur beatae dolorum optio.</p>
+    <p>Vitae nesciunt beatae asperiores hic!</p>
+    <p>Impedit placeat dignissimos natus. Dolor?</p>
+    <p>Quisquam temporibus soluta fugiat deleniti.</p>
+  </body>
+</html>

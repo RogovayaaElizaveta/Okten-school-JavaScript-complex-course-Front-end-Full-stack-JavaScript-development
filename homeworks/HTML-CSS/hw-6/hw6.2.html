@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/homeworks/HTML-CSS/hw-1/style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(30, 124, 106);
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .simple_form {
+        width: 50vw;
+        height: 50vh;
+        background-color: white;
+      }
+      .simple_form div:nth-child(1) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: darkcyan;
+        height: 20%;
+      }
+      .simple_form div:nth-child(1) h3 {
+        font-size: 40px;
+        font-weight: 400;
+      }
+      .simple_form form {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 300px;
+        margin-top: 15px;
+        height: 30px;
+      }
+      .simple_form >form>div {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+      }
+      form input[type="submit"]{
+        background-color: rgba(0, 139, 139,0.35);
+        border-radius: 10px;
+        border:1px solid  grey;
+        width: 100px;
+        height:30px ;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="simple_form">
+      <h3>Вхід в особистий кабінет</h3>
+      <form class="form">
+        <input type="text" name="login" placeholder="Логін або email" />
+        <input type="password" name="password" placeholder="Пароль" />
+        <div>
+          <label
+            >Запамятати мене
+            <input type="checkbox " name="remember " />
+          </label>
+          <input type="submit" name="submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

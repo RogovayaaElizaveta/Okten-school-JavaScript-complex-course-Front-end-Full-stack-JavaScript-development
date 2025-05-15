@@ -1,0 +1,50 @@
+<!--стандартна структура HTML-->
+<!-- тег якляє собою вказівку на тип документа,за допомогою нього ми розуміємо що використовуємо HTML 5-ї версії-->
+<!DOCTYPE html>
+<!--тег маэ в собы атрибук який зазначаэ мову яка буде використовуватись всередины документу потрыбен для php-->
+<html lang="en">
+  <!--head- голова(поміщаємо різні технічні моменти,вказівка на кодування,скрипти,назва заголовка і тд) and body-тіло(поміщаємо різні теги які будуть відображатись на сторінці у браузері)-->
+  <head>
+    <!--вказує на кодування яке використовується на сторінці для корректного відображення кирилиці,латиницю і тд змінюємо за селектором тегу-->
+    <!--Мова про пріорітетність-- вбудована стилізація має більший пріорітет ніж внутрішня-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--назва веб-сторінки-->
+    <title>Lesson1.2-Стилізація</title>
+    <!--3)Третій способ стилізації елементів - це підключення файлу з розширенням css-->
+    <link rel="stylesheet" href="/classworks/HTML-CSS/lesson2/style.css" />
+    <!--2)Другий спосіб стилізації -Внутрішня стилізація-внутрішня тому що знаходиться всередині файлу-->
+    <style>
+   
+        p{
+            color: antiquewhite;
+            font-size: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <!--тег контейнерного ипу бо має закриті і відкриті теги які можуть містити в собі інформацію-->
+    <!--LOrem ТЕКСТ РИБА-->
+    <!--br-одинарний тег идля переносу на наступний рядок-->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem perferendis
+      numquam libero, ipsum quasi facere similique! Assumenda reprehenderit
+      ratione odio inventore quia hic voluptas?<br />
+      Ea perspiciatis obcaecati incidunt temporibus libero! Lorem ipsum, dolor
+      sit amet consectetur adipisicing elit. Ut, omnis.
+    </p>
+
+    <!--існує тільки шість рівнів заголовків - h1,h2,h3,h4,h5,h6-->
+    <h1>Заголовок1</h1>
+    <h2>Заголовок2</h2>
+    <h3>Заголовок3</h3>
+    <h4>Заголовок4</h4>
+    <h5>Заголовок5</h5>
+    <h6>Заголовок6</h6>
+
+
+<!--Лекція -2 як ми можемо формотуватита стилізувати текст-  Унас є три можливості для стилізації компонентів-->
+<!--1)Ми можемо використовувати вбудовану стилізацію прямо всередину тегу,стандартний розмір шрифту 16 px-->
+<p style="color: aqua;font-size: 20px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quaerat earum, quis ipsum sint minus reprehenderit incidunt repellendus adipisci ex et. Nihil, exercitationem dignissimos id enim ratione quibusdam assumenda reiciendis.</p>
+  </body>
+</html>

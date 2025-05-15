@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Псевдокласи та псевдоелементи</title>
+    <style>
+        /*
+        стилізація першого елемента в  ,для цього зазначаємо  через  : ,тому що це псевдоклас ,що ми хочемо  якийсь перший дочірній компонент застилізувати 
+        */
+         div:last-child{
+            color: cyan;
+         }
+       /*
+       застилізуємо першу лінію контенту який у нас є (конкретна частина якогось компонента),псевдоелементи з різними позначеннями , 1)псевдоелемент з  ::- (раніше для позначення псевдоелементів і псевдокласів використовували  ::,зараз псевдокласи від псевдоелементів вирішили розділяти) ,   2)та псевдоелемент з ::::-позначення псевдоелементів
+       */
+         /*
+       div p::first-letter{
+           color: tomato;
+         }
+           */
+         /*
+         тільки перший рядок 
+
+         також за допомогою псевдокласів ми можемо вказувати чи ми хочемо застилізувати 
+         */
+         /*
+         div p::first-line{
+            color:beige;
+         }
+            */
+        /*
+         У нвс є можливість стилізувати елемент конкретного типу який знаходиться останнім
+         стилізація останнього параграфу
+        */
+       div p:last-of-type{
+        color: darkgray;
+       }
+        /*
+        ми можемо стилізувати якийсь конкретний контент в середині наведеного тегу 
+        (це може бути або перша літера або перша лінія і це вже у нас будуть не псевдо-класи а псевдоелементи,
+        також є можливість стилізувати елементи за своєрідними формулами ,наприклад ми бажаємо застилізувати кожен другий ,
+        третій ,десятий ,парні не парні значення ,ми це можемо реалізувати використовуючи псевдокласи ntx child )
+        */
+
+        /*
+        через  ми вказуємо які елементи  які саме посилання нас цікавлять ,якщо бажаємо позначити зазначеним кольором кожен елемент  - ставимо значення - n,
+        якщо бажаємо щоб кожен другий компонент ,тоді ще й додаємо індекс перед n - 2
+        ul li:nth-child(2n),стилізувати кожен другий компонент починаючи з 3-го  ,для цього необхідно додати до формули + ,тоді ми вказуємо з якого компонента включно ми бажаємо розпочати стилізацію
+         ul li:nth-child(2n+6)
+         якщо бажаємо вказати парні або не прані елементи 
+         ul li:nth-child(odd) //не прані компоненти
+         ul li:nth-child(even) //парні компоненти
+
+         ul li:nth-last-child(2n+6) - last-child те саме тільки в зворотньому порядку
+        */
+        ul li:nth-child(n){
+         color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <!--Псевдо-клас це можливість застилізувати якийсь елемент на основі його певного стану ,так як це було з hover 
+    ,коли ми наводили на компонент і він змінював свою властивість,псевдоелемент дозволяє стилізувати якусь окрему частину
+     елемента,або додавати до нього якийсь додатковий вміст -->
+    <!---->
+    <!---->
+    <!---->
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Facere commodi quidem magnam minima similique.</p>
+        <p>Illo voluptatibus itaque aspernatur dicta velit!</p>
+        <p>Labore ratione tenetur impedit! Fugit, quibusdam.</p>
+        <p>Accusamus est repellendus ipsum quaerat modi?</p>
+        <p>Nam unde illum debitis nisi illo!</p>
+        <p>Soluta incidunt distinctio id cupiditate nesciunt.</p>
+        <span>Lorem ipsum dolor sit amet.</span><span>Laborum nihil reiciendis quis nobis!</span><span>Dicta laudantium maiores mollitia eos!</span><span>Dolore aut voluptates reiciendis veritatis!</span>
+    </div>
+    <ul>
+        <li>Lorem, ipsum dolor.</li>
+        <li>Similique, officiis facilis.</li>
+        <li>Cupiditate, alias sed.</li>
+        <li>Magni, facilis voluptatibus?</li>
+        <li>Alias, saepe sequi.</li>
+        <li>Commodi, voluptates tempora.</li>
+        <li>Explicabo, sequi voluptatem.</li>
+        <li>Recusandae, repellendus officia!</li>
+        <li>Minima, neque quos.</li>
+    </ul>
+</body>
+</html>

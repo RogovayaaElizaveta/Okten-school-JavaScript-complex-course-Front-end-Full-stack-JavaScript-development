@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  font-family: Inter;
+}
+body {
+  /*
+для ми приховаємо все що знаходиться за його межами 
+*/
+  overflow: hidden;
+}
+.wrapper-page-not-found {
+  background: var(--Background-bg-secondary, #161622);
+  height: 100vh;
+  /*
+  Рівняємо ми тільки по обгортці 
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-left {
+  border-radius: 396px;
+  border: 48px solid #6f1df4;
+  opacity: 0.5;
+  width: 396px;
+  height: 396px;
+  flex-shrink: 0;
+  position: absolute;
+  top: -200px;
+  left: -210px;
+}
+.circle-right {
+  width: 260px;
+  height: 260px;
+  flex-shrink: 0;
+  border-radius: 260px;
+  border: 48px solid #6f1df4;
+  opacity: 0.5;
+  position: absolute;
+  right: -120px;
+  top: -20px;
+}
+.page-not-found {
+  text-align: center;
+}
+
+.page-not-found h2 {
+  width: 367px;
+  height: 180px;
+  color: var(--Text-txt-primary, rgba(255, 255, 255, 0.9));
+  text-align: center;
+  font-size: 180px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  font-family: Inter;
+  padding-left: 80px;
+}
+.page-not-found h3 {
+  flex: 1 0 0;
+  color: var(--Text-txt-primary, rgba(255, 255, 255, 0.9));
+  text-align: center;
+
+  /* Large title/3 strong */
+
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 57.6px */
+  letter-spacing: 0.25px;
+  margin: 30px 83px 33px 83px;
+}
+
+/*
+Визначити ширину і висоту для параграфа самостійно ,це і буде відступ або абзац ,це в тому випадкку якщо там не вказано 
+*/
+
+.page-not-found p {
+  width: 533px;
+  height: 56px;
+  color: var(--Text-txt-secondary, rgba(255, 255, 255, 0.75));
+  text-align: center;
+
+  /* Text/1 regular */
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  flex: 1 0 0;
+  margin-top: 33px;
+  margin-bottom: 40px;
+}
+.page-not-found  div button :nth-child(1) {
+  display: flex;
+  height: 64px;
+  padding: 0px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 32px;
+  background: var(--Brand-Primary, #6f1df4);
+  color: var(--Pallete-White, #fff);
+  text-align: center;
+
+  /* Text/3 strong */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+}
+.page-not-found  div button :nth-child(2){
+  display: flex;
+  height: 64px;
+  padding: 0px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 32px;
+  background: var(--Background-bg-primary, #fff);
+  color: var(--Pallete-Black, #000);
+  text-align: center;
+
+  /* Text/3 strong */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+}
+div.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.get_course {
+  border: none;
+}
+.g_home {
+  border: none;
+}

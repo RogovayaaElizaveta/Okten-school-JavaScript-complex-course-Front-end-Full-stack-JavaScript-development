@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson5 - Селектори .Класи та ідентефікатори.</title>
+    <link rel="" href="/classworks/HTML-CSS/lesson5/style.css">
+    <style>
+        /*
+1)
+        */
+        p{
+            color: antiquewhite;
+        }
+        .Lorem{
+ background-color: yellow;
+        }
+        #Lorem{
+background-color: aquamarine;
+
+        }
+        .size{
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1)для того щоб застилізувати даний текст необхідно звернутись до тегу і вказати що ці параграфи матимуть  інший колір
+     ми можемо також використовувати вдудовану стилізацію , можна характеризувати ,звертатись за классом та айди
+     -->
+     <!--Стилізація за класом має більший приорітет ніж стилізація за тегом-->
+     <!--Класи ми можемо одночасно присвоювати декільком елементам , ідентефікатори є максимально унікальними,і його ми можемо 
+     присваювати тільки одному елементу,      елемент може одночасно мати і клас і ідентифікатор  ,якщо одночасно оголосити елементу
+      клас і ідентифікатор то  пріорітетним буде властивості і значення ідентифікатора-->
+      <!--Якщо до всього цього дописати вбудований стиль то  в такому випадку пріорітетнсть надасться вбудованим стилям-->
+<p class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, cum!</p>
+<p id="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, facere.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium, architecto?</p>
+<!--можна вказати два класи --> 
+<p class=" Lorem size"></p>
+<!--Для стилізації компонентів використовуємо класи-->
+
+</body>
+</html>

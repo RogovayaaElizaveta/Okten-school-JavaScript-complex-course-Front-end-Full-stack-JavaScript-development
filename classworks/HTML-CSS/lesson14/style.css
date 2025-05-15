@@ -1,0 +1,57 @@
+/*
+*/
+*{
+    margin: 0;
+    padding-left: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    /*
+    для зміну скролу -  в нашому випадку він буде плавним 
+    */
+    scroll-behavior:smooth ;
+}
+/*
+*/
+
+section{
+    height: 100vh;
+
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    /*
+    відступ зверху та знизу ,по бокам він не потрібен 
+    */
+    padding: 30px 0 ;
+}
+nav ul a {
+    color:bisque;
+}
+#section-home{
+    background-color: palevioletred;
+}
+#section-info{
+background-color: cornflowerblue;
+}
+#section-about{
+    background-color: aquamarine;
+}
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*
+*/
+/*
+*/
+
