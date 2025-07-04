@@ -94,6 +94,7 @@ ul {
   height: 900px;
   flex-shrink: 0;
   background: #eff0f3;
+box-sizing: border-box;
 }
 
 .Hero_section .Hero_Text {
